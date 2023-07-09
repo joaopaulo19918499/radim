@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radim</title>
+    <link rel="stylesheet" href="momento.css">
+    <link rel="shortcut icon" href="assets/lua.jpg" type="image/x-icon">
+    <style>
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+
+        button {
+            display: inline-block;
+            background-color: hsl(98, 80%, 61%);;
+            padding: 10px;
+            width: 150px;
+            color: black;
+            text-align: center;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="assets/nanip50.gif" alt="Um coração animado">
+    <p>Você gostaria de ler um bilhete?</p>
+    <button id="yesButton" type="button">Sim</button>
+    <button id="noButton" type="button">Não</button>
+    <button id="Escutar" type="button">Escutar</button>
+    
+
+    <script src="dsdsds.js"></script>
+    <script>
+        document.getElementById('yesButton').addEventListener('click', function() {
+            var popup = document.createElement('div');
+            popup.id = 'popup';
+            popup.innerHTML = '<p>Oi meu bem, não sei que horas você está vendo isso, mas vi que você estava meio desanimada então decidi fazer isso para te alegrar um pouco (espero que agrade).<br>Não sei oq está acontecendo totalmente, mas espero que você fique bem Isa, te admiro gosto muito da sua companhia<br> E sei que tudo que está acontecendo na sua vida vai passar, sempre que precisar estarei aqui, pode contar comigo vida jkkk, vamos marcar de comer meu brigadeira na panela esse mês vai que te anima jkkk(não custa tentar, o não a gente sempre tem jkkkkk)<br> Bom é isso espero que você fique bem, e espero que tenha pelo menos arrancado um sorrisinho desse seu rosto, beijinhos.❤️‍🩹<br> Ainda tem algo que eu quero te mostrar, vou te mandar daqui amanhã pq estou cansado. </p>';
+
+            document.body.appendChild(popup);
+        });
+
+        document.getElementById('noButton').addEventListener('click', function() {
+            var button = document.getElementById('noButton');
+            button.style.animation = 'moveButton 2s infinite alternate';
+            button.disabled = true;
+        });
+        const playButton = document.getElementById('Escutar');
+
+// Cria uma nova instância do objeto de áudio
+const audio = new Audio('assets/ANAVITÓRIA - Preta (Audio)__PS76DN87q4.mp3');
+
+// Define a função de reprodução quando o botão for clicado
+playButton.addEventListener('click', function() {
+  // Verifica se a música já está tocando, pausa se estiver
+  if (audio.paused) {
+    audio.play();
+    playButton.textContent = 'Pausar "Preta"';
+  } else {
+    audio.pause();
+    playButton.textContent = 'Escutar';
+  }
+});
+    </script>
+    <style>
+        #noButton {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 40px;
+            background-color: hsl(0, 82%, 51%);;
+            color: black;
+            text-align: center;
+            border-radius: 20px;
+            cursor: not-allowed;
+            animation: moveButton 8s infinite alternate;
+        }
+        #Escutar {
+            display: inline-block;
+            background-color: hsl(98, 80%, 61%);;
+            padding: 10px;
+            width: 150px;
+            color: black;
+            text-align: center;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        @keyframes moveButton {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            25% {
+                top: 10%;
+                left: 10%;
+            }
+            50% {
+                top: 10%;
+                left: 90%;
+            }
+            75% {
+                top: 90%;
+                left: 10%;
+            }
+            100% {
+                top: 90%;
+                left: 90%;
+           
+            }
+            
+        }

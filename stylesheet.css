@@ -1,0 +1,65 @@
+body {
+    background-image: url(imagem/wallpapers-branco-em-4k-0.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+button {
+    display: inline-block;
+    background-color: #cb44cf;
+    padding: 10px;
+    width: 150px;
+    color: black;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+#movingButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 40px;
+    background-color: #d42a0c;
+    color: black;
+    text-align: center;
+    border-radius: 20px;
+    cursor: not-allowed;
+    animation: moveButton 2s infinite alternate;
+}
+
+@keyframes moveButton {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+#thankYouMessage {
+    display: none;
+    width: 200px;
+    height: 200px;
+    background-color: #814394;
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    line-height: 200px;
+    border-radius: 20px;
+}
+body {
+    font-family: 'Inter', sans-serif;
+}
